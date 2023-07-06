@@ -12,7 +12,6 @@ for(let i = 0; i < smlPhotos.length; i++){
 }
 defaultImages();
 //Change photo focused when clicked on.
-
 document.addEventListener('click', function(event){
     //Whatever is clicked on, change focused photo to that
     let img = event.target;
