@@ -11,6 +11,16 @@ for(let i = 0; i < smlPhotos.length; i++){
 }
 }
 defaultImages();
-//Change photo focused when clicked on
+//Change photo focused when clicked on.
 
-//Maybe add a cool transition or something
+document.addEventListener('click', function(event){
+    //Whatever is clicked on, change focused photo to that
+    let img = event.target;
+    for(let i = 0; i < smlPhotos.length; i++){
+        if(img.id === 'sml-img' + i){
+            focusedPhoto = lrgPhotos[i];
+        }
+    }
+    document.getElementById('focused-img').src = focusedPhoto;
+    console.log(focusedPhoto);
+});
